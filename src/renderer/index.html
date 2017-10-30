@@ -4,16 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hola mundo!</title>
+  <title>Gustagram</title>
+  <link rel="stylesheet" href="../assets/css/photon.min.css">
   <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 
-  <div>
-    <p>Hola, soy una aplicación de electron</p>
-    <p id="mensaje"></p>
+  <div class="window">
+    <!-- <header class="toolbar toolbar-header">
+      <h1 class="title">Header</h1>
+    </header> -->
+
+    <header class="toolbar toolbar-header">
+      <h1 class="title">Header with actions</h1>
+
+      <div class="toolbar-actions">
+        <div class="btn-group">
+          <button class="btn btn-default">
+            <span class="icon icon-home"></span>
+          </button>
+          <button class="btn btn-default">
+            <span class="icon icon-folder"></span>
+          </button>
+          <button class="btn btn-default active">
+            <span class="icon icon-cloud"></span>
+          </button>
+          <button class="btn btn-default">
+            <span class="icon icon-popup"></span>
+          </button>
+          <button class="btn btn-default">
+            <span class="icon icon-shuffle"></span>
+          </button>
+        </div>
+
+        <button class="btn btn-default">
+          <span class="icon icon-home icon-text"></span>
+          Filters
+        </button>
+
+        <button class="btn btn-default btn-dropdown pull-right">
+          <span class="icon icon-megaphone"></span>
+        </button>
+      </div>
+    </header>
+
+
+    <div class="window-content">
+      <div class="pane-group">
+        <div class="pane-sm sidebar">
+
+          <ul class="list-group">
+            <li class="list-group-header">
+              <input id="search-box" class="form-control" type="text" placeholder="Busca una imagen">
+            </li>
+            <li class="list-group-item selected">
+              <img class="img-circle media-object pull-left" src="../assets/img/1.png" width="32" height="32">
+              <div class="media-body">
+                <strong>imagen 1</strong>
+                <p>2MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="img-circle media-object pull-left" src="../assets/img/2.png" width="32" height="32">
+              <div class="media-body">
+                <strong>imagen 2</strong>
+                <p>2MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="img-circle media-object pull-left" src="../assets/img/3.png" width="32" height="32">
+              <div class="media-body">
+                <strong>imagen 3</strong>
+                <p>2MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="img-circle media-object pull-left" src="../assets/img/4.png" width="32" height="32">
+              <div class="media-body">
+                <strong>imagen 4</strong>
+                <p>2MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="img-circle media-object pull-left" src="../assets/img/5.png" width="32" height="32">
+              <div class="media-body">
+                <strong>imagen 5</strong>
+                <p>2MB</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="pane">
+          <div class="image-view full-height">
+            <header class="toolbar toolbar-header image-toolbar">
+              <div class="toolbar-actions">
+                <div class="btn-group">
+                  <button id="open-directory" class="btn btn-default">
+                    <span class="icon icon-folder icon-text"></span>
+                    Abrir ubicación
+                  </button>
+                </div>
+
+                <button class="btn btn-default pull-right">
+                  <span class="icon icon-download icon-text"></span>
+                  Guardar
+                </button>
+
+                <select id="filters" class="pull-right">
+                  <option value="normal" selected="selected">normal</option>
+                  <option value="normal">normal</option>
+                  <option value="clarendon">clarendon</option>
+                  <option value="gingham">gingham</option>
+                  <option value="moon">moon</option>
+                  <option value="lark">lark</option>
+                  <option value="reyes">reyes</option>
+
+                  <option value="juno">juno</option>
+                  <option value="slumber">slumber</option>
+                  <option value="crema">crema</option>
+                  <option value="ludwig">ludwig</option>
+                  <option value="aden">aden</option>
+                  <option value="perpetua">perpetua</option>
+                  <option value="amaro">amaro</option>
+                  <option value="mayfair">mayfair</option>
+                  <option value="rise">rise</option>
+                  <option value="hudson">hudson</option>
+                  <option value="valencia">valencia</option>
+                  <option value="xpro2">xpro2</option>
+
+                </select>
+                <label for="filters" class="pull-right filter-label">Filtros: </label>
+
+
+              </div>
+            </header>
+
+            <div class="image-container">
+              <img id="image-displayed" src="../assets/img/1.png" alt="image">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="toolbar toolbar-footer">
+      <h1 class="title">Footer</h1>
+    </footer>
   </div>
 
+  <script src="lib/filterous2-2.0.0.min.js"></script>
   <script src="frontend.js"></script>
 </body>
 </html>
